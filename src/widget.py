@@ -4,7 +4,7 @@ import masks
 
 
 def mask_account_card(user_data: Union[str]) -> str:
-    """Функция которая умеет обрабатывать информацию как о картах, так и о счетах"""
+    """Функция которая умеет обрабатывать информацию как о картах, так и о счетах и выводит счёт, либо тип карты"""
     word = user_data.split()
     num_card = word[-1]
     num_account = word[-1]
