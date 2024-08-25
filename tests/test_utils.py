@@ -36,9 +36,7 @@ def test_get_transactions_dictionary(open_mock):
 
 @patch("builtins.open")  # подменяем функцию открытия неправильного файла
 def test_get_transactions_dictionary_DecodeError(open_mock):
-    open_mock.return_value.__enter__.return_value.read.return_value = (
-        '[{"name": "dict_for_test"}, {"nam'
-    )
+    open_mock.return_value.__enter__.return_value.read.return_value = '[{"name": "dict_for_test"}, {"nam'
     assert get_transactions_dictionary("any_path_no_matter") == []
     open_mock.assert_called_once_with("any_path_no_matter", "r", encoding="utf-8")
 

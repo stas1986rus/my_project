@@ -22,4 +22,4 @@ def convert_from_i_to_rub(transaction: dict[str, float]) -> float | str:
         return currency_amount
     else:
         return "Неизвесная волюта"
-        # говорит о возрощений пипа str, ошибка из за того то не float
+        # говорит о возрощений пипа str, ошибка из за того что не float
